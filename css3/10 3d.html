@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box{
+				width: 200px;
+				height: 200px;
+				background: red;
+				position: absolute;
+				top: 200px;
+				left: 500px;
+				transform: rotateX(20deg) rotateY(20deg) rotateZ(0deg);
+				perspective: 1600px;
+				transform-style: preserve-3d;
+			}
+			.box1{
+				width: 200px;
+				height: 200px;
+				background: green;
+				position: absolute;
+				transform: translateZ(100px);
+			/*	backface-visibility: hidden;*/
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background: blue;
+				position: absolute;
+				transform: translateZ(-100px);
+			}
+			.box3{
+				width: 200px;
+				height: 200px;
+				background: gold;
+				position: absolute;
+				transform: rotateY(90deg) translateZ(-100px);
+			}
+			.box4{
+				width: 200px;
+				height: 200px;
+				background: gold;
+				position: absolute;
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			.box5{
+				width: 200px;
+				height: 200px;
+				background: brown;
+				position: absolute;
+				transform: rotateX(90deg) translateZ(100px);
+			}
+			.box6{
+				width: 200px;
+				height: 200px;
+				background: brown;
+				position: absolute;
+				transform: rotateX(90deg) translateZ(-100px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box1">前</div>
+			<div class="box2">后</div>
+			<div class="box3">左</div>
+			<div class="box4">右</div>
+			<div class="box5">上</div>
+			<div class="box6">下</div>
+		</div>
+	</body>
+</html>

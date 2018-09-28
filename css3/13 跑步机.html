@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box{
+				width: 180px;
+				height: 300px;
+				border: solid 1px #ccc;
+				margin: 100px auto;
+				background: url(img/charector.png) no-repeat -360px 0px;
+				animation: run 4s step-start infinite;
+			}
+			@keyframes run{
+				0%{background: url(img/charector.png) no-repeat -360px 0px;}
+				14%{background: url(img/charector.png) no-repeat -180px 0px;}
+				28%{background: url(img/charector.png) no-repeat 0px 0px;}
+				42%{background: url(img/charector.png) no-repeat -1080px 0px;}
+				56%{background: url(img/charector.png) no-repeat -900px 0px;}
+				70%{background: url(img/charector.png) no-repeat -720px 0px;}
+				84%{background: url(img/charector.png) no-repeat -540px 0px;}
+				100%{background: url(img/charector.png) no-repeat -360px 0px;}
+			}
+		</style>
+		<script>
+			window.onload = function(){
+				var btn = document.querySelectorAll("button");
+				var box = document.querySelector(".box");
+				for(var i = 0 ;i<btn.length;i++){
+					btn[i].index = i;
+					btn[i].onclick = function(){
+						if(this.index == 0){
+							box.style.animation = "run 2s step-start infinite";
+						}else if(this.index == 1){
+							box.style.animation = "run 4s step-start infinite";
+						}else{
+							box.style.animation = "run 6s step-start infinite";
+						}
+						
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button class="btn1">快</button>
+		<button class="btn1">一般</button>
+		<button class="btn1">慢</button>
+		<div class="box"></div>
+	</body>
+</html>

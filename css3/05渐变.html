@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box1{
+				width: 200px;
+				height: 200px;
+				border: solid 1px black;
+				background: linear-gradient(red,blue);
+				background: linear-gradient(red,yellow,blue);
+				background: linear-gradient(to top, red 20%,yellow 40%,blue);
+				background: linear-gradient(20deg, red 20%,yellow 40%,blue);
+			}
+			.box2{
+				width: 200px;
+				height: 300px;
+				border: solid 1px black;
+				background: radial-gradient(60% 15%, farthest-side,blue,green,yellow,black);
+				background: -webkit-radial-gradient(100px 150px,circle closest-corner ,blue,green,yellow,black);
+				background: -ms-radial-gradient(60% 55%, farthest-side,blue,green,yellow,black);
+				background: -moz-radial-gradient(60% 55%, farthest-side,blue,green,yellow,black);
+				background: -o-radial-gradient(60% 55%, farthest-side,blue,green,yellow,black);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		body{
+			overflow: hidden;
+		}
+		.obox{
+			width: 200px;
+			height: 200px;
+			margin: 200px auto;
+			position: relative;
+			border: solid 1px;
+			transform-origin: 0px 0px;
+			transform: rotate(0deg);
+			transition: all 2s;
+		}
+			.box{
+				width: 0;
+				height: 0;
+				border: solid 180px transparent;
+				border-top:solid 100px red;
+				transition: all 2s;
+			}
+			.box:before{
+				content: "";
+				width: 0;
+				height: 0;
+				position: absolute;
+				border: solid 180px transparent;
+				border-bottom:solid 100px blue;
+				transform: rotate(105deg) translate(-135px,125px);
+			}
+			.box:after{
+				content: "";
+				width: 0;
+				height: 0;
+				position: absolute;
+				border: solid 180px transparent;
+				border-bottom:solid 100px gold;
+				transform: rotate(-105deg) translate(226px,-212px);
+			}
+			.obox:hover{
+				transform: rotate(360deg);
+			}
+			.obox:hover .box{
+				transform: scale(0.5,0.5);
+			}
+		</style>
+	</head>
+	<body>
+	<div class="obox">
+		<div class="box"></div>
+	</div>
+		
+	</body>
+</html>
